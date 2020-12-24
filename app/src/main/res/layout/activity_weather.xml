@@ -25,7 +25,9 @@
                 android:layout_height="wrap_content">
 
                 <include layout="@layout/now"/>
+
                 <include layout="@layout/forecast"/>
+
                 <include layout="@layout/life_index"/>
 
             </LinearLayout>

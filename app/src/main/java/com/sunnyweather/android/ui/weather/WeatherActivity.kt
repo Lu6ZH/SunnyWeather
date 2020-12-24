@@ -97,6 +97,7 @@ class WeatherActivity : AppCompatActivity() {
         val realtime = weather.realtime
         val daily = weather.daily
 
+        //填充now.xml布局中的数据
         val currentTempText = "${realtime.temperature.toInt()} ℃"
         currentTemp.text = currentTempText
         currentSky.text = getSky(realtime.skycon).info
@@ -104,6 +105,7 @@ class WeatherActivity : AppCompatActivity() {
         currentAQI.text = currentPM25Text
         nowLayout.setBackgroundResource(getSky(realtime.skycon).bg)
 
+        //填充forecast.xml布局中的数据
         forecastLayout.removeAllViews()
         val days = daily.skycon.size
         for(i in 0 until days){
@@ -123,6 +125,7 @@ class WeatherActivity : AppCompatActivity() {
             temperatureInfo.text = tempText
             forecastLayout.addView(view)
         }
+        //填充life_index.xml布局中的数据
         val lifeIndex = daily.lifeIndex
         coldRiskText.text = lifeIndex.coldRisk[0].desc
         dressingText.text = lifeIndex.dressing[0].desc
