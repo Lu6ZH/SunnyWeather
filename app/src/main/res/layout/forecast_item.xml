@@ -15,7 +15,9 @@
     <ImageView
         android1:id="@+id/skyIcon"
         android1:layout_width="20dp"
-        android1:layout_height="20dp"/>
+        android1:layout_height="20dp"
+        android1:contentDescription="@string/app_name"
+        />
 
     <TextView
         android1:id="@+id/skyInfo"
