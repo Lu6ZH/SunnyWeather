@@ -10,8 +10,8 @@ import retrofit2.http.Path
 interface WeahterService {
 
     @GET("v2.5/${SunnyWeatherApplication.TOKEN}/{lng},{lat}/realtime.json")
-    fun getRealtimeWeather(@Path("lng") lng:String,@Path("lat")lat:String): Call<RealtimeResponsse>
+    fun getRealtimeWeather(@Path("lng") lng:String,@Path("lat")lat:String): Call<RealtimeResponsse>//用于获取实时的天气信息
 
     @GET("v2.5/${SunnyWeatherApplication.TOKEN}/{lng},{lat}/daily.json")
-    fun getDailyWeather(@Path("lng")lng:String,@Path("lat") lat:String):Call<DailyResponse>
+    fun getDailyWeather(@Path("lng")lng:String,@Path("lat") lat:String):Call<DailyResponse>//用于获取未来的天气信息
 }

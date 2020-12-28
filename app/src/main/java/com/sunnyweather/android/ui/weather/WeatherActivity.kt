@@ -79,7 +79,7 @@ class WeatherActivity : AppCompatActivity() {
         })
         viewModel.refreshWeather(viewModel.locationLng,viewModel.locationLat)
 
-        swipeRefresh.setColorSchemeResources(R.color.colorPrimary)
+        swipeRefresh.setColorSchemeResources(R.color.colorAccent)
         refreshWeather()
         swipeRefresh.setOnRefreshListener {
             refreshWeather()

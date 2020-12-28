@@ -18,7 +18,7 @@ class WeatherViewModel : ViewModel() {
         Repository.refreshWeather(location.lng,location.lat)
     }
 
-    fun refreshWeather(lng:String,lat:String){
+    fun refreshWeather(lng:String,lat:String){//刷新天气信息
         locationLiveData.value = Location(lng,lat)
     }
 
